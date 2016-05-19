@@ -18,6 +18,5 @@ amqp.connect('amqp://admin:admin@local.docker', function(err, conn) {
         ch.ack(msg);
       }, secs * 1000);
     }, {noAck: false});
-
   });
 });

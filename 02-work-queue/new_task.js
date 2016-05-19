@@ -10,7 +10,6 @@ amqp.connect('amqp://admin:admin@local.docker', function(err, conn) {
     ch.assertQueue(q, {durable: true});
     ch.sendToQueue(q, new Buffer(msg), {persistent: true});
     console.log(" [x] Sent '%s'", msg);
-
   });
 
   setTimeout(function() { conn.close(); process.exit(0) }, 500);
